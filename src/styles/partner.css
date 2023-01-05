@@ -1,0 +1,21 @@
+.wrap {
+  justify-content: center;
+  border: 2px olid red;
+}
+.wrap .client_img {
+  margin-top: 30px;
+  width: auto;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+   .client_img .fig_img {
+    /* border: 2px solid red; */
+    column-gap: 10px;
+    width: 62px;
+    height: 40px;
+  }
+}

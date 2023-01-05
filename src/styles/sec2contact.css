@@ -1,0 +1,31 @@
+.row{
+    /* border: 2px solid rgb(0, 89, 255); */
+    padding: 20px;
+}
+
+.form_content{
+    /* border: 2px solid black; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;    padding: 10px;
+}
+.map_content iframe{
+    margin-top: 30px;
+    /* border: 2px solid red; */
+    
+}
+
+@media (max-width: 540px){
+    .map_content iframe{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+       width: 500px;
+       height: 200px;
+    }
+}
+@media (max-width: 800px){
+    .map_content iframe{
+        margin-top: 20px;
+       width: 300px;
+       height: 200px;
+    }
+}

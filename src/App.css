@@ -1,0 +1,60 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+/* css styles for whole pages */
+:root {
+  --primary-color: #1aa3ff;
+  --link-active: #0085dd;
+  --heading-color: ;
+  --btn-primary-bg: ;
+  --btn-secondary-bg: ;
+  --font-name: "Cabin", sans-serif;
+  --btn-clr: #eb3300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--font-name);
+}
+a{
+  text-decoration: none;
+  /* color: var(--link-color); */
+}
+section{
+  padding: 60px 0px;
+}
+
+.container{
+  width: 1140px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+.description{
+  /* color: var(--small-text-color); */
+  line-height: 30px;
+  font-size: .9rem;
+  padding: 5px;
+}
+.subtitle{
+  font-size: 2rem;
+  color: rgb(19, 67, 156);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 800px){
+  section{
+    padding: 30px 0px;
+
+  }
+}
+
+
