@@ -1,9 +1,8 @@
 import React from "react";
-
 import "../Footer/footer.css";
-import 'remixicon/fonts/remixicon.css'
-
-import logo from "../../images/Logo.png"
+import "remixicon/fonts/remixicon.css";
+import logo from "../../images/Logo.png";
+import { motion } from "framer-motion";
 
 const quickLinks01 = [
   {
@@ -61,9 +60,13 @@ const Footer = () => {
             <h3 className="quick_link-title">About Us</h3>
             <ul className="quick_link">
               {quickLinks01.map((item, index) => (
-                <li className="quick_link-item" key={index}>
+                <motion.li
+                  className="quick_link-item"
+                  key={index}
+                  whileHover={{ scale: 1.3, originX: 0 }}
+                >
                   <a href={item.path}> {item.display}</a>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -72,16 +75,18 @@ const Footer = () => {
             <h3 className="quick_link-title">Legal</h3>
             <ul className="quick_link">
               {quickLinks02.map((item, index) => (
-                <li className="quick_link-item" key={index}>
-                  <a href={item.path}> {item.display}</a>
-                </li>
+                <motion.li
+                  className="quick_link-item"
+                  key={index}
+                  whileHover={{ scale: 1.3, originX: 0 }}
+                >
+                  <a href={item.path}>{item.display}</a>
+                </motion.li>
               ))}
             </ul>
           </div>
         </div>
-        <p className="copyright">
-          Copyright {year}. All Rights Reserved
-        </p>
+        <p className="copyright">Copyright {year}. All Rights Reserved</p>
         <div className="social_icon">
           <span>
             <a href="https://www.instagram.com/" target="_blank">
@@ -93,13 +98,15 @@ const Footer = () => {
               <i class="ri-linkedin-line"></i>
             </a>
           </span>
-          <span><i class="ri-facebook-line"></i></span>
-          <span><i class="ri-twitter-line"></i></span>
-
-          
+          <span>
+            <i class="ri-facebook-line"></i>
+          </span>
+          <span>
+            <i class="ri-twitter-line"></i>
+          </span>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 };
 

@@ -6,16 +6,18 @@ import Sec4 from "../components/AboutComp/Sec4";
 import Sec5 from "../components/AboutComp/Sec5";
 import Sec6 from "../components/AboutComp/Sec6";
 
+import { motion, AnimatePresence } from "framer-motion";
+
 const About = () => {
   return (
-    <div>
+    <motion.div>
       <Sec1 />
       <Sec2 />
       <Sec3 />
       <Sec4 />
       <Sec5 />
       <Sec6 />
-    </div>
+    </motion.div>
   );
 };
 

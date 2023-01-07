@@ -30,7 +30,7 @@ const Services = () => {
           {serviceData.map((item, index) => (
             <div className="services_item" key={index}>
               <h3 className="service_title">{item.title}</h3>
-              <p className="description">{item.desc}</p>
+              <p className="description p_desc">{item.desc}</p>
             </div>
           ))}
         </div>

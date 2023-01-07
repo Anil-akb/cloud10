@@ -5,9 +5,11 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage";
-import About from "./pages/About"
+import About from "./pages/About";
 import Resource from "./pages/Resource";
 import Contact from "./pages/Contact";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 function App() {
   return (

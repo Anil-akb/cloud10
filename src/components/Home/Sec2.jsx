@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/homeSec2.css";
-
+import { motion } from "framer-motion";
 import heroDarkImg from "../../images/hero3.jpg";
 
 const Sec2 = () => {
@@ -8,7 +8,12 @@ const Sec2 = () => {
     <section>
       <div className="container">
         <div className="sec_wrapper">
-          <div className="sec_content">
+          <motion.div
+            className="sec_content"
+            initial={{ x: '-100vw' }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring", stiffness: 100 }}
+          >
             <h2>Do Better Business In the Changing Landscape</h2>
             <p className="description head_desc">
               The advanced technology adoption by customers is changing the
@@ -25,7 +30,7 @@ const Sec2 = () => {
               solutions and strategies that allow you better understand the
               insights and accelerate your business success.
             </p>
-          </div>
+          </motion.div>
           <div className="sec_img">
             <img src={heroDarkImg} alt="hero-img" />
           </div>
