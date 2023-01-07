@@ -29,4 +29,9 @@
  .navbarr{
   margin-left: 0;
  }
+
+ .mainNav{
+  height: auto;
+ }
+
 }
