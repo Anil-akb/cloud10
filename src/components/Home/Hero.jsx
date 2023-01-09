@@ -18,7 +18,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
-              
+              transition={{ delay: 1.0,duration: 0.5 }}
             >
               <h2>Manage Your Hotel Revenue </h2>
               <h2 className="highlight">Without Limits</h2>
@@ -28,7 +28,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
-              transition={{ delay: 1.50,duration: 0.5 }}
+              transition={{ delay: 1.50,duration: 1.5 }}
             >
               Our revenue management solutions help hotels to deploy and
               implement strategies through real-time data integrations and
