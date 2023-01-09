@@ -15,17 +15,20 @@ const Hero = () => {
         <div className="hero_wrapper">
           <div className="hero_content">
             <motion.div
-              initial={{y: '200vw'}}
-              animate={{y:0}}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              
             >
               <h2>Manage Your Hotel Revenue </h2>
               <h2 className="highlight">Without Limits</h2>
             </motion.div>
             <motion.p
               className="description hero_desc"
-              // initial={{x: '500vw'}}
-              // animate={{x:0}}
-              // transition={{ delay: 0.4, duration: 0.5 }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 15 }}
+              transition={{ delay: 1.50,duration: 0.5 }}
             >
               Our revenue management solutions help hotels to deploy and
               implement strategies through real-time data integrations and

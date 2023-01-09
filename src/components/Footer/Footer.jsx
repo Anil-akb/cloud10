@@ -44,7 +44,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer_wrapper">
-          <div className="footer_logo">
+          <div className="">
             <div className="logo">
               <img src={logo} alt="" />
             </div>
