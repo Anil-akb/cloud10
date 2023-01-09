@@ -5,8 +5,9 @@ const Sec5 = () => {
     <section>
       <div className="container">
         <div className="sec5_content">
-          <h2 className="subtitle" style={{marginBottom : "50px"}}>Our Approach</h2>
-          <p style={{wordSpacing : "1px"}}>
+          <h2 className="subtitle" >Our Approach</h2>
+          <hr/>
+          <p className="description" style={{wordSpacing : "1px"}}>
             We look at revenue management a little differently. For us, it’s a
             seven-day-a-week, 24-hour-a-day job. It’s about capitalizing on
             market conditions instead of reacting to them, identifying

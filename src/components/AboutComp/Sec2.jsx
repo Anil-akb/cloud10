@@ -6,17 +6,17 @@ import "../../styles/AboutSec2.css"
 
 const Sec2 = () => {
   return (
-    <section>
+    <section className="sec2-content">
       <div className="container">
-        <div className="sec2_content">
+        <div className="sec2_content ">
           <Container>
-            <Row>
+            <Row className="about_item-wrapper">
               <Col>
-                <h2>Your Business + Our Strategy = More Revenue</h2>
+                <h2 className="sec_h2">Your Business + Our Strategy = More Revenue</h2>
               </Col>
               <Col>
                 <div>
-                  <p>
+                  <p className="description sec_h2">
                     We are a revenue management company founded by hospitality
                     veterans to help hotels to create and optimize opportunities
                     and have built up an extensive track record with

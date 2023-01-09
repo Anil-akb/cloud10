@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import { HashLink } from "react-router-hash-link";
 
-import logo from "../../images/Logo.png"
+import logo from "../../images/Logo.png";
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -13,8 +13,10 @@ const Header = () => {
   return (
     <Navbar expand="xl" className="mainNav">
       <Container>
-        <Navbar.Brand href="/">
-          <img  className="logo" src={logo} alt="" />
+        <Navbar.Brand>
+          <HashLink to="/">
+            <img className="logo" src={logo} alt="" />
+          </HashLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
