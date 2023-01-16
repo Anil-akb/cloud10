@@ -8,17 +8,16 @@ const Hero = () => {
   return (
     <section className="hero_section">
       <div className="hero-img">
-        <motion.img src={heroBg} alt="" loading="lazy"
-        />
+        <motion.img src={heroBg} alt="" />
       </div>
       <div className="container hero_container">
         <div className="hero_wrapper">
           <div className="hero_content">
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 55 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
-              transition={{ delay: 1.0,duration: 0.5 }}
+              // transition={{ delay: 1.0 }}
             >
               <h2>Manage Your Hotel Revenue </h2>
               <h2 className="highlight">Without Limits</h2>
@@ -28,17 +27,26 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
-              transition={{ delay: 1.50,duration: 1.5 }}
+              // transition={{ delay: 1.5 }}
             >
               Our revenue management solutions help hotels to deploy and
               implement strategies through real-time data integrations and
               automation.
             </motion.p>
-            <div className="hero_btns">
+            <motion.div
+              className="hero_btns"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
               <motion.button
                 className="primary_btn"
                 whileHover={{
-                  scale: 1.3, 
+                  scale: 1.3,
                 }}
               >
                 See Demo
@@ -46,7 +54,7 @@ const Hero = () => {
               <motion.button
                 className="secondary_btn"
                 whileHover={{
-                  scale: 1.3
+                  scale: 1.3,
                 }}
               >
                 <HashLink
@@ -56,7 +64,7 @@ const Hero = () => {
                   Contact Us
                 </HashLink>
               </motion.button>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,20 +1,32 @@
-import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import styled from "styled-components";
 import "../../styles/sec2contact.css";
 
-const Sec2 = () => {
-  const [formStatus, setFormStatus] = React.useState("Submit");
-  const onSubmit = (e) => {
+const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setFormStatus("Submited");
-    const { name, email, message } = e.target.elements;
-    let Confirm= {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    console.log("Confirm");
+
+    emailjs
+      .sendForm(
+        "service_qj5wlz7",
+        "template_mx4ortl",
+        form.current,
+        "XILVNh6hT3uCq-pXv"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -22,92 +34,29 @@ const Sec2 = () => {
       <div className="container">
         <Row className="row">
           <Col>
-            <div className="form_content">
-              <form onSubmit={onSubmit}>
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="name">
-                    Name
-                  </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="name"
-                    required
-                  />
-                </div>
+            <StyledContactForm>
+              <form ref={form} onSubmit={sendEmail}>
+                <label>Name</label>
+                <input type="text" name="user_name" required />
 
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="email">
-                    Business Email
-                  </label>
-                  <input
-                    className="form-control"
-                    type="email"
-                    id="email"
-                    required
-                  />
-                </div>
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="number">
-                    Phone
-                  </label>
-                  <input
-                    className="form-control"
-                    type="tel"
-                    id="tel"
-                    required
-                  />
-                </div>
+                <label>Email</label>
+                <input type="email" name="user_email" required />
 
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="number">
-                    Country Name
-                  </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="text-country"
-                    required
-                  />
-                </div>
+                <label>Phone Number</label>
+                <input type="tel" name="user_phone" required />
 
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="text">
-                    Organization
-                  </label>
-                  <input
-                    className="form-control"
-                    type="text"
-                    id="text"
-                    required
-                  />
-                </div>
+                <label>Company Name</label>
+                <input name="company_name" required />
 
-                <div className="mb-3">
-                  <label className="form-label" htmlFor="message">
-                    Message
-                  </label>
-                  <textarea className="form-control" id="message" required />
-                </div>
-                <button className="btn btn-primary" type="submit">
-                  {formStatus}
-                </button>
+                <label>Message</label>
+                <textarea name="message" required />
+
+                <input type="submit" value="Send" />
               </form>
-            </div>
+            </StyledContactForm>
           </Col>
           <Col>
             <div className="map_content">
-              {/* <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.17641056821!2d72.83381081421453!3d19.187495753445983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7dd2e4d4645%3A0xf43400f20dbacb5a!2sKolko%20Industries%20LLP!5e0!3m2!1sen!2sin!4v1670482641641!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                frameBorder="0"
-                style={{ border: "0" }}
-                allowFullScreen="true"
-                aria-hidden="false"
-                tabIndex="0"
-              ></iframe> */}
-
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.2726372701854!2d75.79169726436544!3d26.89484121733527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db43d27873b63%3A0xdfea79f3211a2539!2sUnique%20Aura%20Apartment!5e0!3m2!1sen!2sin!4v1672894035190!5m2!1sen!2sin"
                 width="600"
@@ -127,4 +76,60 @@ const Sec2 = () => {
   );
 };
 
-export default Sec2;
+export default Contact;
+
+
+
+// Styles
+const StyledContactForm = styled.div`
+  width: 400px;
+
+  form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+
+    input {
+      width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+
+      &:focus {
+        border: 2px solid rgb(249, 105, 14);
+      }
+    }
+
+    textarea {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+      max-height: 100px;
+      min-height: 100px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+
+      &:focus {
+        border: 2px solid rgba(0, 206, 158, 1);
+      }
+    }
+
+    label {
+      margin-top: 1rem;
+    }
+
+    input[type="submit"] {
+      margin-top: 2rem;
+      cursor: pointer;
+      background: rgb(249, 105, 14);
+      color: white;
+      border: none;
+    }
+  }
+`;
