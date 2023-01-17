@@ -8,16 +8,16 @@ const Hero = () => {
   return (
     <section className="hero_section">
       <div className="hero-img">
-        <motion.img src={heroBg} alt="" />
+        <img src={heroBg} alt="" />
       </div>
       <div className="container hero_container">
         <div className="hero_wrapper">
           <div className="hero_content">
             <motion.div
-              initial={{ opacity: 0, y: 55 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 555 }}
+              animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, y: 15 }}
-              // transition={{ delay: 1.0 }}
+              transition={{ delay: 0.7 }}
             >
               <h2>Manage Your Hotel Revenue </h2>
               <h2 className="highlight">Without Limits</h2>

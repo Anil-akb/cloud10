@@ -19,7 +19,8 @@ const Header = () => {
           </HashLink>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+
+        <Navbar.Collapse id="basic-navbar-nav"> 
           <Nav className="navbarr" defaultActiveKey="#">
             <Nav.Link className="menu">
               <HashLink className="link" to="/">
