@@ -33,7 +33,7 @@ const Header = () => {
               </HashLink>
             </Nav.Link>
             <Nav.Link className="menu" href="#resource">
-              <HashLink className="link" to="/resource">
+              <HashLink className="link" to="/">
                 Resources
               </HashLink>
             </Nav.Link>

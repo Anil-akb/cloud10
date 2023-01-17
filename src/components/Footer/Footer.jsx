@@ -4,6 +4,7 @@ import "remixicon/fonts/remixicon.css";
 import logo from "../../images/Logo.png";
 import { motion } from "framer-motion";
 
+
 const quickLinks01 = [
   {
     path: "/about",
