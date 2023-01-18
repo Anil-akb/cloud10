@@ -11,17 +11,17 @@ const quickLinks01 = [
     display: "About",
   },
   {
-    path: "/",
+    path: "/#services",
     display: "Services",
   },
   {
     path: "/contact",
     display: "Contact",
   },
-  {
-    path: "/resource",
-    display: "Resources",
-  },
+  // {
+  //   path: "/resource",
+  //   display: "Resources",
+  // },
 ];
 
 const quickLinks02 = [
@@ -45,7 +45,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer_wrapper">
-          <div className="">
+          <div className="footer-desc">
             <div className="logo">
               <img src={logo} alt="" />
             </div>
@@ -72,7 +72,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="footer_quick-links">
+          {/* <div className="footer_quick-links">
             <h3 className="quick_link-title">Legal</h3>
             <ul className="quick_link">
               {quickLinks02.map((item, index) => (
@@ -85,7 +85,7 @@ const Footer = () => {
                 </motion.li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
         <p className="copyright">Copyright {year}. All Rights Reserved</p>
         <div className="social_icon">

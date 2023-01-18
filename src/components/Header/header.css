@@ -28,6 +28,10 @@
   /* border: 2px solid red; */
 }
 
+.link:hover {
+  color: #1aa3ff  ;
+}
+
 @media (min-width: 300px) and (max-width: 1000px) {
   .navbarr {
     margin-left: 0;
