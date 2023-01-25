@@ -13,10 +13,10 @@ const About = () => {
     <motion.div>
       <Sec1 />
       <Sec2 />
-      <Sec3 />
+      {/* <Sec3 /> */}
       <Sec4 />
       <Sec5 />
-      <Sec6 />
+      {/* <Sec6 /> */}
     </motion.div>
   );
 };

@@ -32,8 +32,8 @@ const Header = () => {
                 About Us
               </HashLink>
             </Nav.Link>
-            <Nav.Link className="menu">
-              <HashLink className="link" to="/services">
+            <Nav.Link className="menu" href="#resource">
+              <HashLink className="link" to="/">
                 Services
               </HashLink>
             </Nav.Link>

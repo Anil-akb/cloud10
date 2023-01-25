@@ -33,7 +33,7 @@ const Contact = () => {
     <section>
       <div className="container">
         <Row className="row">
-          <Col>
+          <Col className="contact_form">
             <StyledContactForm>
               <form ref={form} onSubmit={sendEmail}>
                 <label>Name</label>
@@ -82,7 +82,7 @@ export default Contact;
 
 // Styles
 const StyledContactForm = styled.div`
-  width: 400px;
+  width: 300px;
 
   form {
     display: flex;

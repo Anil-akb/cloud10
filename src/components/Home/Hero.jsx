@@ -14,20 +14,26 @@ const Hero = () => {
         <div className="hero_wrapper">
           <div className="hero_content">
             <motion.div
-              initial={{ opacity: 0, x: 555 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, y: 15 }}
-              transition={{ delay: 0.7 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
             >
               <h2>Manage Your Hotel Revenue </h2>
               <h2 className="highlight">Without Limits</h2>
             </motion.div>
             <motion.p
               className="description hero_desc"
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 15 }}
-              // transition={{ delay: 1.5 }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
             >
               Our revenue management solutions help hotels to deploy and
               implement strategies through real-time data integrations and
@@ -43,14 +49,14 @@ const Hero = () => {
                 ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              <motion.button
+              {/* <motion.button
                 className="primary_btn"
                 whileHover={{
                   scale: 1.3,
                 }}
               >
                 See Demo
-              </motion.button>
+              </motion.button> */}
               <motion.button
                 className="secondary_btn"
                 whileHover={{
