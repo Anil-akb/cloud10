@@ -19,7 +19,7 @@ const Cathline = () => {
                 scale: 1.1
               }}
             >
-              <a href="tel:+91 9777403555">Request a Callback</a>
+              <a href="tel:+91 9777403555">Request a Call</a>
             </motion.button>
           </div>
         </div>
