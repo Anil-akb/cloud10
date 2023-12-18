@@ -34,7 +34,7 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link className="menu" href="#resource">
               <HashLink className="link" to="/">
-                Resources
+                Services
               </HashLink>
             </Nav.Link>
             <Nav.Link className="menu">

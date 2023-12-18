@@ -112,7 +112,7 @@
 
 
 
-/* @media (max-width: 800px) {
+@media (max-width: 800px) {
   .footer_wrapper {
     flex-direction: column;
     display: flex;
@@ -122,4 +122,10 @@
   .logo img {
     display: flex;
   } 
-} */
+
+  .footer_quick-links{
+    width: 100%;
+    margin-left: 0;
+  }
+  
+}
