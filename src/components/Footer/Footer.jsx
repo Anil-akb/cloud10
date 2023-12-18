@@ -19,7 +19,7 @@ const quickLinks01 = [
     display: "Contact",
   },
   {
-    path: "/resource",
+    path: "/",
     display: "Resources",
   },
 ];
